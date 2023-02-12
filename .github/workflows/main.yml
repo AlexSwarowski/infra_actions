@@ -31,7 +31,7 @@ jobs:
         cd infra_project/
         # запустить написанные разработчиком тесты
         python manage.py test
-build_and_push_to_docker_hub:
+  build_and_push_to_docker_hub:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     needs: tests
@@ -53,4 +53,4 @@ build_and_push_to_docker_hub:
         uses: docker/build-push-action@v2 
         with:
           push: true
-          tags: alexswarowski/infra_project:latest 
+          tags: alexswarowski/infra_project:latest
